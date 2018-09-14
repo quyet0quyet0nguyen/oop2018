@@ -46,9 +46,9 @@ public class Student {
         email = e;
     }
     public void getInfo(){
-        System.out.println("name" +name);
-        System.out.println("id"+id);
-        System.out.println("group"+group);
-        System.out.println("email"+email);
+         System.out.print("name :" +name+"; ");
+        System.out.print("id :"+id+"; ");
+        System.out.print("group :"+group+"; ");
+        System.out.println("email :"+email+"; ");
     }
 }
