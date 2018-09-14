@@ -14,6 +14,9 @@ public class StudentManagement {
         st[3].setGroup("K62c-g");
         st[4].setGroup("K62c-g");
         studentsByGroup();
+	System.out.println("Xoa sinh vien voi id 17020999");
+        removeStudent("17020999");
+        studentsByGroup();
     }
 
     public static boolean sameGroup(Student s1,Student s2) {
