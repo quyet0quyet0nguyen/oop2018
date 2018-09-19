@@ -63,6 +63,7 @@ public class StudentManagement {
 	}
 
 	public static void removeStudent(String id) {
+		if (id == null) id = "unKnow id";
 		int i = 0;
 		while (i < n)
 			if (st[i].getId().equals(id)) {
