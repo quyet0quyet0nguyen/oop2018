@@ -1,14 +1,29 @@
 package week2.task2;
 
-import java.lang.Math;
-
 public class Fraction {
 	private int numerator;
 	private int denominator;
 	
+	public static void main (String args[]) {
+		Fraction fra1 = new Fraction(5,6);
+		Fraction fra2 = new Fraction(25,30);
+		Fraction fra3 = new Fraction(0,1);
+		fra3 = fra1.multiply(fra2);
+		fra3.getFraction();
+	}
+	
     public Fraction(int numerator, int denominator) {
     	this.numerator = numerator;
     	this.denominator = denominator;
+    }
+    
+    public void getFraction() {
+    	if (this.denominator==0) 
+    		System.out.println("Khong xac dinh");
+    	else if (this.denominator==1) 
+    		System.out.println(this.numerator);
+    	else 
+    		System.out.println(this.numerator+"/"+this.denominator);
     }
     
     public static Fraction simplify(Fraction fra) {
