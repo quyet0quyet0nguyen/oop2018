@@ -91,9 +91,9 @@ public class Fraction {
         fra.numerator = this.numerator*other.denominator;
     	return simplify(fra);
     }
-    public boolean equals(Fraction other) {
+    public boolean equals(Object other) {
     	Fraction fra = new Fraction(0,0);
-    	fra = this.divide(other);
+    	fra = this.divide((Fraction)other);
     	if (fra.numerator==1) return true;
     	else return false;
     } 
