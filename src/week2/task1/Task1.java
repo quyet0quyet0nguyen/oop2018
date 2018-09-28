@@ -1,7 +1,6 @@
 package week2.task1;
 
 public class Task1 {
-public class task1 {
 	public static void main(String args[]) {
 		// find UCLN 
 		System.out.println("UCLN(1,0) = "+gcd(1,0));
@@ -35,5 +34,4 @@ public class task1 {
     		return sum;
     	}
     }
-}
 }
