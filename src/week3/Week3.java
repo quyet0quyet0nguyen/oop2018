@@ -1,43 +1,26 @@
 package week3;
 
-import org.junit.Before;
-import org.junit.Test;
+public class Week3 {
 
-import static org.junit.Assert.*;
+    public static int max(int m, int n) {
+        if (m>n) return m;
+        return n;
+    }
 
-public class Week3Test {
-	
-	@Test
-	public void testMax() {
-		assertEquals(3,Week3.max(-10,3));
-		assertEquals(0,Week3.max(-5,0));
-		assertEquals(3,Week3.max(2,3));
-		assertEquals(4,Week3.max(4,-9));
-		assertEquals(1,Week3.max(1,1));
-		assertEquals(-10,Week3.max(-10,-10));
-	}
-	
-	@Test
-	public void testMinOfArray() {
-		int array[]= {1,2,3,-3,0};
-		assertEquals(-3,Week3.minOfArray(array));
-		int array1[] = {10,20,30,40,2,-10};
-		assertEquals(-10,Week3.minOfArray(array1));
-		int array2[]= {-3,4,5,-2,0,1,3};
-		assertEquals(-3,Week3.minOfArray(array2));
-		int array3[]= {1,1,1,1,1,1,1,1,0};
-		assertEquals(0,Week3.minOfArray(array3));
-		int array4[]= {-10,-10,20,-10,2};
-		assertEquals(-10,Week3.minOfArray(array4));
-	}
-	
-	@Test
-	public void testCalculateBMI() {
-		assertEquals("Binh thuong",Week3.calculateBMI(40,1.4));
-		assertEquals("Thieu can",Week3.calculateBMI(40,1.5));
-		assertEquals("Beo phi",Week3.calculateBMI(60,1.4));
-		assertEquals("Binh thuong",Week3.calculateBMI(50,1.5));
-		assertEquals("Thua can",Week3.calculateBMI(60,1.6));
-	}
-		
+    public static int minOfArray(int[] array) {
+        int i = array[0];
+        for (int j = 1;j<array.length;j++)
+        	if (array[j]<i) i=array[j];
+		return i;
+    }
+
+    public static String calculateBMI(double weight, double height) {
+    	double BMI =  weight/(height*height);
+    	BMI = (double) Math.round(BMI*100.0)/100.0;
+    	if (BMI <18.5) return "Thieu can";
+    	else if (18.5<=BMI&&(BMI<23)) return "Binh thuong";
+    	else if (23<=BMI&&(BMI<=24.99)) return "Thua can";
+    	else return "Beo phi";
+    }
 }
+
