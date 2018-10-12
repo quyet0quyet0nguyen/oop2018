@@ -1,6 +1,7 @@
 package week4.task1;
 
 public class CamSanh extends Cam {
+	protected double weight;
 	protected double cost;
 	public CamSanh() {
 		this.weight = 0;
