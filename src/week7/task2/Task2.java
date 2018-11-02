@@ -63,7 +63,8 @@ public class Task2 {
 		String filepath = "C:\\Users\\nikos\\Desktop\\TestFiles\\testFile2.txt";
 		BufferedReader br = null;
 		br = new BufferedReader(new FileReader(filepath));
-		 
+		br.close();
+                br.read(); 
 
 	}
 	
