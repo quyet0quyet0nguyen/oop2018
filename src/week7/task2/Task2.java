@@ -29,6 +29,11 @@ public class Task2 {
 			System.out.println("Error: an I/O exception of some sort has occurred."
 					+ " This class is the general class of exceptions produced by failed or interrupted I/O operations.");
 		}
+                try{
+                    FileNotFoundException();
+                } catch (java.io.FileNotFoundException e){
+                    System.out.print("Error: File not found");
+                }
 	}
 	
 	public static void NullPointer(Object obj) throws java.lang.NullPointerException{
